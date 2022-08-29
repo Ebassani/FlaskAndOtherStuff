@@ -3,6 +3,7 @@
 body {
     font-family: 'Carter One', cursive;
     background-color: #ffd500;
+    margin: 0;
 }
 
 .content {
@@ -119,12 +120,47 @@ h2, h1, .biggerSpan {
 }
 
 .navbar {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: inline;
+    position: sticky;
+    top: 0;
+    display: flex;
+    width: 100%;
+    background-color: lightgray;
+    z-index: 2;
 }
 
-.navbar li {
-    display: inline;
+.navlink {
+    padding: 0.8rem;
+}
+
+.col_daror {
+    background: linear-gradient(lightgray, lightgray 40%, #bd620c 50%, #bd620c);
+    background-size: 100% 200% ;
+    -webkit-transition: background 0.6s;
+    transition: background 0.6s;
+}
+
+.col_or {
+    background: linear-gradient(lightgray, lightgray 40%, #d78034 50%, #d78034);
+    background-size: 100% 200% ;
+    -webkit-transition: background 0.6s;
+    transition: background 0.6s;
+}
+
+.col_lior {
+    background: linear-gradient(lightgray, lightgray 40%, #e88e48 50%, #e88e48);
+    background-size: 100% 200% ;
+    -webkit-transition: background 0.6s;
+    transition: background 0.6s;
+}
+
+.col_liye {
+    background: linear-gradient(lightgray, lightgray 40%, #e8b048 50%, #e8b048);
+    background-size: 100% 200% ;
+    -webkit-transition: background 0.6s;
+    transition: background 0.6s;
+}
+
+.navlink:hover {
+    cursor: pointer;
+    background-position: 100% 100%;
 }
