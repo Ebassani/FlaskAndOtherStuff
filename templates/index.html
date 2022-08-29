@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+    <title>Demo page</title>
+</head>
+<body>
+
+
+<ul class="navbar">
+  <li class="navlink"><a href="">Dashboard</a></li>
+  <li><a href="navlink">uwefiuef</a></li>
+  <li><a href="navlink">wef</a></li>
+  <li><a href="navlink">vfdvdfv</a></li>
+</ul>
+
+<div class="content">
+    <div class="mainPage">
+        <h1>Dashboard</h1>
+
+        <!--
+        Radio menu with a slide animation on the bar below it
+        -->
+
+        <input type="radio" id="option1" class="selection slide-toggle" name="radio">
+        <label for="option1"><span class="biggerSpan option">My school</span></label>
+
+        <input type="radio" id="option2" class="selection slide-toggle" name="radio">
+        <label for="option2"><span class="biggerSpan option">My progress</span></label>
+
+        <div class="slider">
+            <div class="bar"></div>
+        </div>
+
+        <!--
+        Div containing pages, these pages should be separate as they are supposed to appear one at a time.
+        -->
+
+        <div class="pages">
+            <!--
+            All page 1 should be inside div page1
+            -->
+            <div class="page1">
+                <div class="graph1">
+                    <h2>//TEXT//TEXT//TEXT//</h2>
+                    <img src="{{ url_for('static', filename= 'images/photo.png') }}" alt="">
+                </div>
+            </div>
+
+            <!--
+            Following the principle of page 1, page 2 and all possible next pages should put their content in
+            different divs. The css, until this point, only works with page 1 and 2, in case of more pages
+            more additions will be necessary these additions being proper positioning for the page
+            and more animations.
+            -->
+            <div class="page2">
+                <div class="graph1">
+                    <h2>//TEXT//TEXT//TEXT//2</h2>
+                    <img src="{{ url_for('static', filename= 'images/photo.png') }}" alt="">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

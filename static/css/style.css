@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+
+body {
+    font-family: 'Carter One', cursive;
+    background-color: #ffd500;
+}
+
+.content {
+    margin: auto;
+    max-width: 800px;
+    min-width: 300px;
+    background-color: snow;
+    padding: 1rem;
+}
+
+h2, h1, .biggerSpan {
+    margin: 1rem;
+}
+
+.biggerSpan {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.mainPage {
+    margin-bottom: 1rem;
+}
+
+.selection {
+    display: none;
+}
+
+.slider {
+    width: 20rem;
+    height: 0.5rem;
+    display: block;
+    background: lightgray;
+    border-radius: 5px;
+}
+
+.slider .bar {
+    width: 50%;
+    height: 0.5rem;
+    background: black;
+    border-radius: 5px;
+}
+
+.option:hover {
+    cursor: pointer;
+}
+
+.mainPage #option1:checked ~ .slider .bar {
+    margin-left: 0;
+}
+
+.mainPage #option1:checked ~ .pages .page1 {
+    left: 0;
+}
+
+.mainPage #option1:checked ~ .pages .page2 {
+    left: 100%;
+}
+
+.mainPage #option2:checked ~ .slider .bar {
+    margin-left: 50%;
+}
+
+.mainPage #option2:checked ~ .pages .page1 {
+    left: -100%;
+}
+
+.mainPage #option2:checked ~ .pages .page2 {
+    left: -100%;
+}
+
+.mainPage label, .slider .bar {
+    transition: all 200ms ease-in-out;
+    -webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+}
+
+.mainPage label, .pages .page1 {
+    transition: all 200ms ease-in-out;
+    -webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+}
+
+.mainPage label, .pages .page2 {
+    transition: all 200ms ease-in-out;
+    -webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+}
+
+.pages {
+    display: flex;
+    overflow: hidden;
+}
+
+.page1 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 0;
+}
+
+.page2 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 100%;
+}
+
+.graph1 {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding-top: 1rem;
+    overflow: hidden;
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+.navbar li {
+    display: inline;
+}
