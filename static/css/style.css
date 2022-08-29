@@ -129,38 +129,38 @@ h2, h1, .biggerSpan {
 }
 
 .navlink {
-    padding: 0.8rem;
+    padding: 0.8rem 0.8rem 0.4rem;
+    -webkit-transition: background 0.6s;
+    transition: background 0.6s;
 }
 
 .col_daror {
-    background: linear-gradient(lightgray, lightgray 40%, #bd620c 50%, #bd620c);
+    background: linear-gradient(lightgray, lightgray 50%, #bd620c 50%, #bd620c);
     background-size: 100% 200% ;
-    -webkit-transition: background 0.6s;
-    transition: background 0.6s;
+    border-bottom: solid 0.4rem #bd620c;
 }
 
 .col_or {
-    background: linear-gradient(lightgray, lightgray 40%, #d78034 50%, #d78034);
+    background: linear-gradient(lightgray, lightgray 50%, #d78034 50%, #d78034);
     background-size: 100% 200% ;
-    -webkit-transition: background 0.6s;
-    transition: background 0.6s;
+    border-bottom: solid 0.4rem #d78034;
 }
 
 .col_lior {
-    background: linear-gradient(lightgray, lightgray 40%, #e88e48 50%, #e88e48);
+    background: linear-gradient(lightgray, lightgray 50%, #e88e48 50%, #e88e48);
     background-size: 100% 200% ;
-    -webkit-transition: background 0.6s;
-    transition: background 0.6s;
+    border-bottom: solid 0.4rem #e88e48;
 }
 
 .col_liye {
-    background: linear-gradient(lightgray, lightgray 40%, #e8b048 50%, #e8b048);
+    background: linear-gradient(lightgray, lightgray 50%, #e8b048 50%, #e8b048);
     background-size: 100% 200% ;
-    -webkit-transition: background 0.6s;
-    transition: background 0.6s;
+    border-bottom: solid 0.4rem #e8b048;
 }
 
 .navlink:hover {
     cursor: pointer;
     background-position: 100% 100%;
+    padding-bottom: 0.8rem;
+    border: 0;
 }
