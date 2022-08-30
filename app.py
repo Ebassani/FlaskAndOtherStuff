@@ -1,6 +1,8 @@
 from math import sqrt
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, Response
+
+from static.python.functions import *
 
 app = Flask(__name__)
 
@@ -20,10 +22,23 @@ def hello():
     return render_template('hello.html')
 
 
+@app.route('/plot.png')
+def plot_png():
+    fig = create_figure()
+    output = io.BytesIO()
+    FigureCanvas(fig).print_png(output)
+    return Response(output.getvalue(), mimetype='image/png')
+
+
 @app.route('/form', methods=['POST'])
 def form():
     name = request.form.get('name')
     return '''<h1>The name is {}</h1>'''.format(name)
+
+
+@app.route('/text')
+def something():
+    return text()
 
 
 @app.route('/sqrt')
@@ -31,7 +46,6 @@ def calc():
     def test():
         a = 9
         x = 1
-        y = 2
         epsilon = 10 ** -10
         string = ''
         while True:
@@ -51,7 +65,7 @@ def calc():
         return value
 
     def prime_num(num):
-        for test in range(2, int(sqrt(num)) + 1):
+        for aux in range(2, int(sqrt(num)) + 1):
             if num % test == 0:
                 return False
         return True
@@ -77,5 +91,5 @@ def calc():
                 pal += str(i) + ','
         return pal
 
-    return test() + '<br>' + values() + '<br>' + str(prime_num(5)) + '<br>' + str(next_prime(14)) + '<br>' + \
-           str(is_palindrome(42024)) + '<br>' + palindromes(300)
+    return test() + '<br>' + values() + '<br>' + str(prime_num(5)) + '<br>' + str(next_prime(14)) +\
+        '<br>' + str(is_palindrome(42024)) + '<br>' + palindromes(300)

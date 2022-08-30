@@ -46,27 +46,27 @@ h2, h1, .biggerSpan {
     border-radius: 5px;
 }
 
-.dashboard #option1:checked ~ .dashboard__slider .dashboard__slider__bar {
+.dashboard #dashboard__option_myschool:checked ~ .dashboard__slider .dashboard__slider__bar {
     margin-left: 0;
 }
 
-.dashboard #option1:checked ~ .dashboard__page .dashboard__page__myschool {
+.dashboard #dashboard__option_myschool:checked ~ .dashboard__page .dashboard__page__myschool {
     left: 0;
 }
 
-.dashboard #option1:checked ~ .dashboard__page .dashboard__page__myprogress {
+.dashboard #dashboard__option_myschool:checked ~ .dashboard__page .dashboard__page__myprogress {
     left: 100%;
 }
 
-.dashboard #option2:checked ~ .dashboard__slider .dashboard__slider__bar {
+.dashboard #dashboard__option_myprogress:checked ~ .dashboard__slider .dashboard__slider__bar {
     margin-left: 50%;
 }
 
-.dashboard #option2:checked ~ .dashboard__page .dashboard__page__myschool {
+.dashboard #dashboard__option_myprogress:checked ~ .dashboard__page .dashboard__page__myschool {
     left: -100%;
 }
 
-.dashboard #option2:checked ~ .dashboard__page .dashboard__page__myprogress {
+.dashboard #dashboard__option_myprogress:checked ~ .dashboard__page .dashboard__page__myprogress {
     left: -100%;
 }
 
