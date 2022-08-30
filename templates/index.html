@@ -8,49 +8,49 @@
 <body>
 
 
-<div class="navbar">
-    <div class="navlink col_daror">
-        <span class="navbar_text">Dashboard</span>
+<div class="menu">
+    <div class="menu__link menu__link--color-darkorange hover__pointer">
+        <span>Dashboard</span>
     </div>
-    <div class="navlink col_or">
-        <span class="navbar_text">Dashboard</span>
+    <div class="menu__link menu__link--color-orange hover__pointer" onclick="window.location='{{ url_for('hello')}}'">
+        <span>Dashboard</span>
     </div>
-    <div class="navlink col_lior">
-        <span class="navbar_text">Dashboard</span>
+    <div class="menu__link menu__link--color-lightorange hover__pointer" onclick="window.location='/sqrt'">
+        <span>Dashboard</span>
     </div>
-    <div class="navlink col_liye">
-        <span class="navbar_text">Dashboard</span>
+    <div class="menu__link menu__link--color-darkyellow hover__pointer">
+        <span>Dashboard</span>
     </div>
 </div>
 
 <div class="content">
-    <div class="mainPage">
+    <div class="dashboard">
         <h1>Dashboard</h1>
 
         <!--
         Radio menu with a slide animation on the bar below it
         -->
 
-        <input type="radio" id="option1" class="selection slide-toggle" name="radio">
-        <label for="option1"><span class="biggerSpan option">My school</span></label>
+        <input type="radio" id="dashboard__option_myschool" class="dashboard__selection slide-toggle" name="radio">
+        <label for="dashboard__option_myschool"><span class="biggerSpan hover__pointer">My school</span></label>
 
-        <input type="radio" id="option2" class="selection slide-toggle" name="radio">
-        <label for="option2"><span class="biggerSpan option">My progress</span></label>
+        <input type="radio" id="dashboard__option_myprogress" class="dashboard__selection slide-toggle" name="radio">
+        <label for="dashboard__option_myprogress"><span class="biggerSpan hover__pointer">My progress</span></label>
 
-        <div class="slider">
-            <div class="bar"></div>
+        <div class="dashboard__slider">
+            <div class="dashboard__slider__bar"></div>
         </div>
 
         <!--
         Div containing pages, these pages should be separate as they are supposed to appear one at a time.
         -->
 
-        <div class="pages">
+        <div class="dashboard__page">
             <!--
             All page 1 should be inside div page1
             -->
-            <div class="page1">
-                <div class="graph1">
+            <div class="dashboard__page__myschool">
+                <div class="myschool__content">
                     <h2>//TEXT//TEXT//TEXT//</h2>
                     <img src="{{ url_for('static', filename= 'images/photo.png') }}" alt="">
                 </div>
@@ -62,8 +62,8 @@
             more additions will be necessary these additions being proper positioning for the page
             and more animations.
             -->
-            <div class="page2">
-                <div class="graph1">
+            <div class="dashboard__page__myprogress">
+                <div class="myschool__content">
                     <h2>//TEXT//TEXT//TEXT//2</h2>
                     <img src="{{ url_for('static', filename= 'images/photo.png') }}" alt="">
                 </div>
