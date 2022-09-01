@@ -3,6 +3,7 @@ from math import sqrt
 from flask import Flask, render_template, request, Response
 
 from static.python.functions import *
+from static.python.conn import *
 
 app = Flask(__name__)
 
@@ -15,6 +16,19 @@ def index():
 '''
 more than one page
 '''
+
+
+@app.route('/conn')
+def con():
+    conn = get_db_connection()
+    conn.close()
+    return 'hello'
+
+
+@app.route('/create')
+def create():
+    create_table()
+    return 'tables created'
 
 
 @app.route('/hello')
@@ -34,11 +48,6 @@ def plot_png():
 def form():
     name = request.form.get('name')
     return '''<h1>The name is {}</h1>'''.format(name)
-
-
-@app.route('/text')
-def something():
-    return text()
 
 
 @app.route('/sqrt')
